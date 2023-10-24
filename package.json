@@ -1,0 +1,8 @@
+{
+  "name": "vueform-plugin-toggle-hover",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "author": "mrw@vueform.com",
+  "license": "ISC"
+}

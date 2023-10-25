@@ -1,8 +1,13 @@
 {
   "name": "vueform-plugin-toggle-hover",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "Toggle hover plugin for Vueform.",
   "type": "module",
-  "author": "mrw@vueform.com",
-  "license": "ISC"
+  "authors": [
+    {
+      "name": "Szabolcs Mucsi",
+      "email": "mrw@vueform.com"
+    }
+  ],
+  "license": "MIT"
 }

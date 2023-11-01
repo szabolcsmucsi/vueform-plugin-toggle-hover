@@ -1,5 +1,5 @@
 {
-  "name": "vueform-plugin-toggle-hover",
+  "name": "vueform-plugin-toggle-tooltip",
   "version": "1.0.0",
   "description": "Toggle hover plugin for Vueform.",
   "type": "module",

@@ -11,7 +11,7 @@ Plugin for Vueform to add a small speech bubble like dialog box above the `Toggl
 1. Install the plugin
 
 ```bash
-npm install vueform-plugin-toggle-hover
+npm install vueform-plugin-toggle-tooltip
 ```
 
 2. Add the plugin in `vueform.config.js`
@@ -19,12 +19,12 @@ npm install vueform-plugin-toggle-hover
 ```js
 // vueform.config.js
 
-import ToggleHoverPlugin from 'vueform-plugin-toggle-hover'
+import ToggleTooltipPlugin from 'vueform-plugin-toggle-tooltip'
 
 export default {
   // ...
   plugins: [
-    ToggleHoverPlugin,
+    ToggleTooltipPlugin,
   ]
 }
 

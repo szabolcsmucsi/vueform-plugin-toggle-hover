@@ -1,7 +1,7 @@
 import { toRefs, computed, onMounted, onBeforeUnmount } from 'vue'
 import './index.scss'
 
-export default function vueformPluginToggleHover() {
+export default function vueformPluginToggleTooltip() {
   return {
     apply: 'ToggleElement',
     props: {
@@ -33,7 +33,7 @@ export default function vueformPluginToggleHover() {
       
       const handleMousenter = () => {
         $hoverDOM = document.createElement('div')
-        $hoverDOM.setAttribute('data-vf-toggle-hover-wrapper', '')
+        $hoverDOM.setAttribute('data-vf-toggle-tooltip-wrapper', '')
         $hoverDOM.innerHTML = hoverContent.value
         
         $el.value.append($hoverDOM)

@@ -1,4 +1,4 @@
-div[data-vf-toggle-hover-wrapper] {
+div[data-vf-toggle-tooltip-wrapper] {
   position: absolute;
   bottom: 2.6rem;
   
@@ -16,7 +16,7 @@ div[data-vf-toggle-hover-wrapper] {
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.25);
 }
 
-div[data-vf-toggle-hover-wrapper]:after{
+div[data-vf-toggle-tooltip-wrapper]:after{
   content: "";
   position: absolute;
   width: 0;

@@ -24,9 +24,9 @@ const props = defineProps({
   bottom: var(--vf-toggle-tooltip-modal-offset, 2.6rem);
   max-width: var(--vf-toggle-tooltip-modal-max-width, 380px);
   width: var(--vf-toggle-tooltip-modal-width, max-content);
-  padding: var(--vf-toggle-tooltip-modal-py, 1.5rem) var(--vf-toggle-tooltip-modal-px, 1.5rem);
+  padding: var(--vf-toggle-tooltip-modal-py, 0.5rem) var(--vf-toggle-tooltip-modal-px, 0.5rem);
   background: var(--vf-toggle-tooltip-modal-bg, #FFFFFF);
-  box-shadow: var(--vf-toggle-tooltip-modal-shadow, 0 0 20px 5px #0000001a);
+  box-shadow: var(--vf-toggle-tooltip-modal-shadow, 0 0 10px 2px #0000001a);
   pointer-events: none;
   transform: translateX(calc(-50% + var(--vf-toggle-width) / 2));
 }
@@ -57,7 +57,7 @@ const props = defineProps({
 }
 
 .vf-toggle-tooltip-content {
-  font-size: var(--vf-toggle-tooltip-modal-content-font-size, 1rem);
+  font-size: var(--vf-toggle-tooltip-modal-content-font-size, 0.875rem);
   line-height: var(--vf-toggle-tooltip-modal-content-line-height, 1.2);
   color: var(--vf-toggle-tooltip-modal-content-color, inherit);
 }

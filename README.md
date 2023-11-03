@@ -1,10 +1,10 @@
-# Toggle Confirm Vueform Plugin
+# Toggle Tooltip plugin for [Vueform](https://github.com/vueform/vueform)
 
-Plugin for Vueform to add a small speech bubble like dialog box above the `ToggleElement` on hover.
+Plugin for [Vueform](https://github.com/vueform/vueform) to add a small speech bubble above the `ToggleElement` on hover.
 
 ## Prerequisites
 
-- [Vueform 1.5.0+](https://github.com/vueform/vueform)
+- [Vueform 1.5.4+](https://github.com/vueform/vueform)
 
 ## Installation
 
@@ -36,8 +36,9 @@ export default {
 <template>
   <Vueform>
     <ToggleElement
-      name="toggle"
-      hover-text="Some string or even <strong>HTML</strong>!"
+        name="toggle"
+        tooltip-text-on="This tooltip will show when toggle is on"
+        tooltip-text-off="This tooltip will show when toggle is off"
     />
   </Vueform>
 </template>
@@ -45,6 +46,60 @@ export default {
 
 ## Options
 
-| Name             | {Type} Default       | Description             |
-|------------------|----------------------|-------------------------|
-| **hoverContent** | `{string} undefined` | Content of hover dialog |
+| Name | {Type} Default | Description |
+| --- | --- | --- |
+| **tooltipText** | `{string} undefined` | The text in the modal when toggle is **On** or **Off** (mutually exclusive with `tooltipOnText` and `tooltipOffText`). |
+| **tooltipOnText** | `{string} undefined` | The text in the modal when toggle is **On**. |
+| **tooltipOffText** | `{string} undefined` | The text in the modal when toggle is **Off**. |
+
+## Classes
+
+Classes can be changed using the built-in Vueform [class management](https://vueform.com/docs/styles-and-layout#add-classes) with `TooltipModal` key, eg.:
+
+```vue
+<ToggleElement
+  ...
+  :replace-classes="{
+    TooltipModal: {
+      'vf-toggle-tooltip' : 'my-overlay-class',
+      'vf-toggle-tooltip-content' : 'my-wrapper-class',
+      // ...
+    }
+  }"
+/>
+```
+## CSS Vars
+
+You can customize the following CSS vars dedicated for this plugin:
+
+```css
+*, :root, :before, :after {
+  /* Modal */
+  --vf-toggle-tooltip-offset: 2.6rem;
+  --vf-toggle-tooltip-max-width: 380px;
+  --vf-toggle-tooltip-width: max-content;
+  --vf-toggle-tooltip-shadow-blur: 10px;
+  --vf-toggle-tooltip-shadow-spread: 2px;
+  --vf-toggle-tooltip-shadow-color: #0000001a;
+  
+  /* Content */
+  --vf-toggle-tooltip-content-py: 0.5rem;
+  --vf-toggle-tooltip-content-px: 0.5rem;
+  --vf-toggle-tooltip-content-bg: #FFFFFF;
+  --vf-toggle-tooltip-content-font-size: 0.875rem;
+  --vf-toggle-tooltip-content-line-height: 1.2;
+  --vf-toggle-tooltip-content-color: inherit;
+}
+```
+
+The plugin also uses the following Vueform default CSS vars:
+
+```css
+*, :root, :before, :after {
+  --vf-toggle-width;
+}
+```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)

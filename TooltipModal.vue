@@ -23,7 +23,7 @@ const props = defineProps({
   position: absolute;
   bottom: var(--vf-toggle-tooltip-modal-offset, 2.6rem);
   max-width: var(--vf-toggle-tooltip-modal-max-width, 380px);
-  width: var(--vf-toggle-tooltip-modal-max-width, max-content);
+  width: var(--vf-toggle-tooltip-modal-width, max-content);
   padding: var(--vf-toggle-tooltip-modal-py, 1.5rem) var(--vf-toggle-tooltip-modal-px, 1.5rem);
   background: var(--vf-toggle-tooltip-modal-bg, #FFFFFF);
   box-shadow: var(--vf-toggle-tooltip-modal-shadow, 0 0 20px 5px #0000001a);

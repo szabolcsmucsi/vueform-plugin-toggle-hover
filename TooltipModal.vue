@@ -53,7 +53,6 @@ const props = defineProps({
   color: var(--vf-toggle-tooltip-modal-title-color, inherit);
   margin-bottom: var(--vf-toggle-tooltip-modal-title-mb, 0.75rem);
   padding-bottom: var(--vf-toggle-tooltip-modal-title-pb, 0.75rem);
-  padding-right: var(--vf-toggle-tooltip-modal-close-width, 1.5rem);
   border-bottom: var(--vf-toggle-tooltip-modal-title-border-width, 1px) solid var(--vf-toggle-tooltip-modal-title-border-color, var(--vf-gray-300));
 }
 

@@ -68,6 +68,7 @@ Classes can be changed using the built-in Vueform [class management](https://vue
   }"
 />
 ```
+
 ## CSS Vars
 
 You can customize the following CSS vars dedicated for this plugin:

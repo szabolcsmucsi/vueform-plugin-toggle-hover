@@ -57,7 +57,8 @@ const props = defineProps({
 }
 
 .vf-toggle-tooltip-content {
-  font-size: var(--vf-toggle-tooltip-modal-font-size, 1rem);
-  color: var(--vf-toggle-tooltip-modal-color, inherit);
+  font-size: var(--vf-toggle-tooltip-modal-content-font-size, 1rem);
+  line-height: var(--vf-toggle-tooltip-modal-content-line-height, 1.2);
+  color: var(--vf-toggle-tooltip-modal-content-color, inherit);
 }
 </style>

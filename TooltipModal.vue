@@ -40,8 +40,8 @@ const props = defineProps({
   left: 50%;
   transform-origin: center;
   transform: rotateZ(-45deg) skew(-20deg, -20deg) translate(-50%, -50%);
-  border: 0.5rem solid #ffffff;
-  border-color: transparent transparent #ffffff #ffffff;
+  border: 0.5rem solid var(--vf-toggle-tooltip-modal-bg, #FFFFFF);
+  border-color: transparent transparent var(--vf-toggle-tooltip-modal-bg, #FFFFFF) var(--vf-toggle-tooltip-modal-bg, #FFFFFF);
   box-shadow: -10px 10px 14px 0px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
 }

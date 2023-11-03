@@ -1,14 +1,10 @@
 <template>
-  <div v-if="title" :class="classes.title" v-html="title" />
   <div :class="classes.content" v-html="content" />
 </template>
 
 <script setup>
 
 const props = defineProps({
-  title: {
-    type: String,
-  },
   content: {
     type: String,
   },
@@ -44,16 +40,6 @@ const props = defineProps({
   border-color: transparent transparent var(--vf-toggle-tooltip-modal-bg, #FFFFFF) var(--vf-toggle-tooltip-modal-bg, #FFFFFF);
   box-shadow: -10px 10px 14px 0px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
-}
-
-.vf-toggle-tooltip-title {
-  font-size: var(--vf-toggle-tooltip-modal-title-font-size, 18px);
-  line-height: var(--vf-toggle-tooltip-modal-title-line-height, 1.2);
-  font-weight: var(--vf-toggle-tooltip-modal-title-font-weight, 500);
-  color: var(--vf-toggle-tooltip-modal-title-color, inherit);
-  margin-bottom: var(--vf-toggle-tooltip-modal-title-mb, 0.75rem);
-  padding-bottom: var(--vf-toggle-tooltip-modal-title-pb, 0.75rem);
-  border-bottom: var(--vf-toggle-tooltip-modal-title-border-width, 1px) solid var(--vf-toggle-tooltip-modal-title-border-color, var(--vf-gray-300));
 }
 
 .vf-toggle-tooltip-content {

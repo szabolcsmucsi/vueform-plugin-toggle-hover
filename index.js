@@ -15,15 +15,6 @@ export default function vueformPluginToggleTooltip() {
       tooltipOffText: {
         type: String,
       },
-      tooltipTitle: {
-        type: String,
-      },
-      tooltipOnTitle: {
-        type: String,
-      },
-      tooltipOffTitle: {
-        type: String,
-      },
     },
     setup(props, context, component) {
       if (!props.tooltipText && !props.tooltipOnText && !props.tooltipOffText) {
@@ -34,9 +25,6 @@ export default function vueformPluginToggleTooltip() {
         tooltipText,
         tooltipOnText,
         tooltipOffText,
-        tooltipTitle,
-        tooltipOnTitle,
-        tooltipOffTitle,
       } = toRefs(props)
       
       let $hoverDOM
@@ -64,17 +52,6 @@ export default function vueformPluginToggleTooltip() {
         return tooltipText.value
       })
       
-      const modalTitle = computed(() => {
-        if (component.value.value && tooltipOnTitle.value && !tooltipTitle.value) {
-          return tooltipOnTitle.value
-        }
-        if (!component.value.value && tooltipOffTitle.value && !tooltipTitle.value) {
-          return tooltipOffTitle.value
-        }
-        
-        return tooltipTitle.value
-      })
-      
       const { classes } = useClasses(props, { name: ref('TooltipModal') }, {
         form$: component.form$,
         el$: component.el$,
@@ -85,7 +62,6 @@ export default function vueformPluginToggleTooltip() {
           merge: true,
           defaultClasses: {
             modal: 'vf-toggle-tooltip-modal',
-            title: 'vf-toggle-tooltip-title',
             content: 'vf-toggle-tooltip-content',
           }
         })
@@ -98,7 +74,6 @@ export default function vueformPluginToggleTooltip() {
           render() {
             return h(TooltipModal, {
               content: modalContent.value,
-              title: modalTitle.value,
               classes: classes.value,
               ref: 'modal$'
             })

@@ -96,17 +96,18 @@ export default function vueformPluginToggleTooltip() {
         TooltipApp = undefined
       }
       
-      const handleChange = () => {
-        component.value.value = !component.value.value
-        
-        if (TooltipApp) {
-          removeModal()
-        }
-        
-        handleMouseenter()
+      const isInViewport = (element) => {
+        let bounds = element.getBoundingClientRect();
+        let doc = document.documentElement;
+        return (
+          bounds.top >= 0 &&
+          bounds.left >= 0 &&
+          bounds.bottom <= (window.innerHeight || doc.clientHeight) &&
+          bounds.right <= (window.innerWidth || doc.clientWidth)
+        )
       }
       
-      const handleMouseenter = () => {
+      const evaluateModalCreation = () => {
         if (
           (component.value.value && !tooltipOnText.value && !tooltipText.value) ||
           (!component.value.value && !tooltipOffText.value && !tooltipText.value)
@@ -115,6 +116,20 @@ export default function vueformPluginToggleTooltip() {
         }
         
         createModal()
+      }
+      
+      const handleChange = () => {
+        component.value.value = !component.value.value
+        
+        if (TooltipApp) {
+          removeModal()
+        }
+        
+        evaluateModalCreation()
+      }
+      
+      const handleMouseenter = () => {
+        evaluateModalCreation()
       }
       
       const handleMouseleave = () => {

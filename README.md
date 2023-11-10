@@ -61,8 +61,12 @@ Classes can be changed using the built-in Vueform [class management](https://vue
   ...
   :replace-classes="{
     TooltipModal: {
-      'vf-toggle-tooltip' : 'my-overlay-class',
-      'vf-toggle-tooltip-content' : 'my-wrapper-class',
+      container: {
+        'vf-toggle-tooltip' : 'my-overlay-class',
+      },
+      content: {
+        'vf-toggle-tooltip-content' : 'my-wrapper-class',
+      }
       // ...
     }
   }"

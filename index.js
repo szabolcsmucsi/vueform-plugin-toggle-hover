@@ -61,7 +61,7 @@ export default function vueformPluginToggleTooltip() {
         component$: ref({
           merge: true,
           defaultClasses: {
-            modal: 'vf-toggle-tooltip',
+            container: 'vf-toggle-tooltip',
             content: 'vf-toggle-tooltip-content',
           }
         })
@@ -82,7 +82,7 @@ export default function vueformPluginToggleTooltip() {
         
         $hoverDOM = document.createElement('div')
         $hoverDOM.setAttribute('data-vf-toggle-tooltip', '')
-        $hoverDOM.setAttribute('class', classes.value.modal.join(' '))
+        $hoverDOM.setAttribute('class', classes.value.container.join(' '))
         
         $el.value.append($hoverDOM)
         $el.value.style.position = 'relative'
